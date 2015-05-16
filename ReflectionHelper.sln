@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionHelper", "ReflectionHelper\ReflectionHelper.csproj", "{2D26AE0C-0D3F-4C2A-8556-B0D26AD81C1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionHelperTest", "ReflectionHelperTest\ReflectionHelperTest.csproj", "{DD96231E-F854-4A8E-9D6B-0EA1285E50FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D26AE0C-0D3F-4C2A-8556-B0D26AD81C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D26AE0C-0D3F-4C2A-8556-B0D26AD81C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D26AE0C-0D3F-4C2A-8556-B0D26AD81C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D26AE0C-0D3F-4C2A-8556-B0D26AD81C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD96231E-F854-4A8E-9D6B-0EA1285E50FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD96231E-F854-4A8E-9D6B-0EA1285E50FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD96231E-F854-4A8E-9D6B-0EA1285E50FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD96231E-F854-4A8E-9D6B-0EA1285E50FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
