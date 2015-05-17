@@ -16,7 +16,7 @@ public interface IParametersTest
     int? IntegerNullable { get; set; }
 }
 ```
-You can instantiate an dynamic object that implemet this interface by simply calling: 
+You can instantiate an dynamic object that implements this interface by simply calling: 
 ```sh
 CustomActivator.CreateInstance<IParametersTest>();
 ```
@@ -27,7 +27,7 @@ It will return the instance of an object that implements the interface **and eac
 ###Other Features
 
 #####Instantiate with custom values
-You can also call it passing a Dictionary<string, object> as parameter to set the default values to the properties:
+You can also call it passing a Dictionary<string, object> as parameter to set default values to the properties:
 ```sh
 var properties = new Dictionary<string, object>();
 properties.Add("Integer", 30);
@@ -72,4 +72,4 @@ myObject.IntegerNullable.Should().Be(null);
 
  [impromptu-interface]:https://github.com/ekonbenefits/impromptu-interface
 
- 
+ That's it :)
