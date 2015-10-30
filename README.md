@@ -2,7 +2,7 @@
 Is a very simple C# .NET library that is able to create a proxy to an interface at runtime, implementing their properties with the default values or custom values passed by parameter. 
 
 ### How it works
-It creates a ExpandoObject at runtime and uses the [impromptu-interface] to make it "Act Like" an interface. 
+It creates an ExpandoObject at runtime and uses the [impromptu-interface] to make it "Act Like" an interface. 
 
 ### How to Use
 Given you have this interface
@@ -16,13 +16,13 @@ public interface IParametersTest
     int? IntegerNullable { get; set; }
 }
 ```
-You can instantiate an dynamic object that implements this interface by simply calling: 
+You can instantiate a dynamic object that implements this interface by simply calling: 
 ```sh
 CustomActivator.CreateInstance<IParametersTest>();
 ```
 It will return the instance of an object that implements the interface **and each property will have its default value**.
 
-> Note: The call CustomActivator.CreateInstance<> works with classes too (not only interfaces) just like the Ativator.CreateInstance<> from the .NET Framework.
+> Note: The call to CustomActivator.CreateInstance<> works with classes too (not only interfaces!). If you pass a class to it internally the `Ativator.CreateInstance<>` from the .NET Framework will be called.
 
 ###Other Features
 
