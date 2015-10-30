@@ -55,7 +55,7 @@ myObject.AnotherBoolean = false;
 myObject.IntegerNullable = 3;
 
 var properties = new Dictionary<string, object>();
-properties.Add("Integer", "10");
+//properties.Add("Integer", "10");
 properties.Add("Boolean", "true");
 properties.Add("AnotherInteger", "20");
 properties.Add("AnotherBoolean", "true");
@@ -63,7 +63,7 @@ properties.Add("IntegerNullable", null);
 
 CustomActivator.PopulateObjectProperties(myObject, properties);
 
-myObject.Integer.Should().Be(10);
+myObject.Integer.Should().Be(1);
 myObject.Boolean.Should().Be(true);
 myObject.AnotherInteger.Should().Be(20);
 myObject.AnotherBoolean.Should().Be(true);
