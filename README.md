@@ -22,12 +22,12 @@ CustomActivator.CreateInstance<IParametersTest>();
 ```
 It will return the instance of an object that implements the interface **and each property will have its default value**.
 
-> Note: The call to CustomActivator.CreateInstance<> works with classes too (not only interfaces!). If you pass a class to it internally the `Ativator.CreateInstance<>` from the .NET Framework will be called.
+> Note: The call to CustomActivator.CreateInstance<> works with classes too (not only interfaces!). So if you pass a class, it just calls the default `Ativator.CreateInstance<>` from the .NET Framework.
 
 ###Other Features
 
 #####Instantiate with custom values
-You can also call it passing a Dictionary<string, object> as parameter to set default values to the properties:
+You can also call it passing a Dictionary<string, object> as parameter to set values to the properties:
 ```sh
 var properties = new Dictionary<string, object>();
 properties.Add("Integer", 30);
@@ -40,7 +40,7 @@ resultObject.Integer.Should().Be(30);
 resultObject.Boolean.Should().Be(true);
 resultObject.AnotherInteger.Should().Be(99);
 resultObject.AnotherBoolean.Should().Be(true);
-resultObject.IntegerNullable.Should().Be(null);
+resultObject.IntegerNullable.Should().Be(null); //We passed nothing, so it uses the default value (for `int?` is "null")
 ```
 
 #####Setting properties to an existing object
