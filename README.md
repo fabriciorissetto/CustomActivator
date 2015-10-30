@@ -6,7 +6,7 @@ It creates an ExpandoObject at runtime and uses the [impromptu-interface] to mak
 
 ### How to Use
 Given you have this interface
-```sh
+```csharp
 public interface IParametersTest
 {
     int Integer { get; set; }
@@ -17,7 +17,7 @@ public interface IParametersTest
 }
 ```
 You can instantiate a dynamic object that implements this interface by simply calling: 
-```sh
+```csharp
 CustomActivator.CreateInstance<IParametersTest>();
 ```
 It will return the instance of an object that implements the interface **and each property will have its default value**.
@@ -28,7 +28,7 @@ It will return the instance of an object that implements the interface **and eac
 
 #####Instantiate with custom values
 You can also call it passing a Dictionary<string, object> as parameter to set values to the properties:
-```sh
+```csharp
 var properties = new Dictionary<string, object>();
 properties.Add("Integer", 30);
 properties.Add("Boolean", true);
@@ -46,7 +46,7 @@ resultObject.IntegerNullable.Should().Be(null); //default value!
 
 #####Setting properties to an existing object
 Only call it again passing a Dictionary<string, object> 
-```sh
+```csharp
 var myObject = new InstantiableObject();
 myObject.Integer = 1;
 myObject.Boolean = false;
