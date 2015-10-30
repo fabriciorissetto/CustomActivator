@@ -34,13 +34,14 @@ properties.Add("Integer", 30);
 properties.Add("Boolean", true);
 properties.Add("AnotherInteger", "99"); //Passing with incorrect type works to ;D
 properties.Add("AnotherBoolean", "true");
+//properties.Add("IntegerNullable", "200"); //We dont want to pass it
 
 var resultObject = CustomActivator.CreateInstance<IParametersTest>(properties);
 resultObject.Integer.Should().Be(30);
 resultObject.Boolean.Should().Be(true);
 resultObject.AnotherInteger.Should().Be(99);
 resultObject.AnotherBoolean.Should().Be(true);
-resultObject.IntegerNullable.Should().Be(null); //We passed nothing, so it uses the default value (for `int?` is "null")
+resultObject.IntegerNullable.Should().Be(null); //default value!
 ```
 
 #####Setting properties to an existing object
