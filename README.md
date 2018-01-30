@@ -5,6 +5,7 @@ Is a very simple C# .NET library that is able to create a proxy to an interface 
 It creates an ExpandoObject at runtime and uses the [impromptu-interface] to make it "Act Like" an interface. 
 
 ### How to Use
+
 Given you have this interface
 ```csharp
 public interface IParametersTest
@@ -24,9 +25,10 @@ It will return the instance of an object that implements the interface **and eac
 
 > Note: The call to CustomActivator.CreateInstance<> works with classes too (not only interfaces!). So if you pass a class, it just calls the default `Ativator.CreateInstance<>` from the .NET Framework.
 
-###Other Features
+### Other Features
 
-#####Instantiate with custom values
+##### Instantiate with custom values
+
 You can also call it passing a Dictionary<string, object> as parameter to set values to the properties:
 ```csharp
 var properties = new Dictionary<string, object>();
@@ -44,7 +46,8 @@ resultObject.AnotherBoolean.Should().Be(true);
 resultObject.IntegerNullable.Should().Be(null); //default value!
 ```
 
-#####Setting properties to an existing object
+##### Setting properties to an existing object
+
 Only call it again passing a Dictionary<string, object> 
 ```csharp
 var myObject = new InstantiableObject();
